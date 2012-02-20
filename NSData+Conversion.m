@@ -13,6 +13,9 @@
 #pragma mark - String Conversion
 - (NSString *)hexadecimalString
 {
+    /* from
+     * http://stackoverflow.com/questions/1305225/best-way-to-serialize-a-nsdata-into-an-hexadeximal-string/9084784#9084784
+     */
     /* Returns hexadecimal string of NSData. Empty string if data is empty.   */
     
     const unsigned char *dataBuffer = (const unsigned char *)[self bytes];
@@ -31,6 +34,9 @@
 
 + (NSData *)dataFromHexadecimalString:(NSString *)string
 {
+    /* from
+     * http://stackoverflow.com/questions/7317860/converting-hex-nsstring-to-nsdata
+     */
     string = [string stringByReplacingOccurrencesOfString:@" " withString:@""];
     NSMutableData *stringData= [[NSMutableData alloc] init];
     unsigned char whole_byte;
