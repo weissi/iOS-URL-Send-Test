@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  CommTestA
+//  CommTestB
 //
 //  Created by Johannes Weiß on 2/20/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
@@ -11,7 +11,14 @@
 @implementation AppDelegate
 
 @synthesize window = _window;
-@synthesize sendDataVC;
+@synthesize showDataVC;
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    NSLog(@"URL received");
+    [self.showDataVC showDataForURL:url];
+    return YES;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -19,8 +26,8 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    self.sendDataVC = [[SendDataViewController alloc] init];
-    self.window.rootViewController = self.sendDataVC;
+    self.showDataVC = [[ShowDataViewController alloc] init];
+    self.window.rootViewController = self.showDataVC;
     
     [self.window makeKeyAndVisible];
     return YES;

@@ -1,6 +1,6 @@
 //
 //  AppDelegate.h
-//  CommTestA
+//  CommTestB
 //
 //  Created by Johannes Weiß on 2/20/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-#import "SendDataViewController.h"
+#import "ShowDataViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
-    SendDataViewController *sendDataVC;
+    ShowDataViewController *showDataVC;
 }
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) SendDataViewController *sendDataVC;
+@property (strong, nonatomic) ShowDataViewController *showDataVC;
 
 @end
