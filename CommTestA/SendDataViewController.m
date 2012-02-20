@@ -51,7 +51,7 @@
 - (void)sendImage
 {
     NSBundle *bundle = [NSBundle mainBundle];
-    NSString *path = [bundle pathForResource:@"tux_giant" ofType:@"jpg"];
+    NSString *path = [bundle pathForResource:@"tux" ofType:@"jpg"];
     NSData *data = [NSData dataWithContentsOfFile:path];
     NSString *strData = [data hexadecimalString];
     
@@ -82,6 +82,8 @@
     
     CGRect textBoxFrame = CGRectMake(0, 0, 400, 300);
     self.textBox = [[UITextView alloc] initWithFrame:textBoxFrame];
+    self.textBox.backgroundColor = [UIColor lightGrayColor];
+    self.textBox.text = @"sample text...\nchange me!";
     
     self.view = [[UIView alloc] init];
     [self.view addSubview:self.textBox];
