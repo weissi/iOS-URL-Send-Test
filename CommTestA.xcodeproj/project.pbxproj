@@ -211,7 +211,7 @@
 		DAED1F3E14F2D57E00D02273 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = DAED1F4114F2D57E00D02273 /* Build configuration list for PBXProject "CommTestA" */;
 			compatibilityVersion = "Xcode 3.2";
